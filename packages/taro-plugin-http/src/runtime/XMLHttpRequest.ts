@@ -262,7 +262,7 @@ export class XMLHttpRequest extends Events {
 
     if (ENABLE_COOKIE) {
       // 处理 set-cookie
-      const setCookieStr = header['Set-Cookie']
+      const setCookieStr = header['Set-Cookie'] || header['set-cookie']
 
       if (setCookieStr && typeof setCookieStr === 'string') {
         let start = 0
